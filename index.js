@@ -23,12 +23,11 @@ $('form').submit(function (event) {
     const remarks = $('textarea[name="remarks"]').val();
 
     let sendText = "【理科実験教室参加申込】\n\n" +
-                   "参加される日程：" + date + "\n" +
-                   "保護者様の氏名：" + parentName + "\n" +
-                   "お子様の学年・氏名：\n" + grade_name +
-                   "備考：\n" + remarks;
-
-    window.alert('変更2');
+                   "○参加される日程：\n" + date + "\n" +
+                   "○保護者様の氏名：\n" + parentName + "\n" +
+                   "○お子様の学年・氏名：\n" + grade_name +
+                   "○備考：\n" + remarks;
+    
     sendMessage(sendText);
     return false;
 });
@@ -41,7 +40,7 @@ function sendMessage(sendText) {
         }
     ])
     .then(() => {
-        window.alert('メッセージを送信しました');
+        // window.alert('メッセージを送信しました');
         liff.closeWindow();
     })
     .catch((error) => {
