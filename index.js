@@ -28,18 +28,23 @@ $('form').submit(function (event) {
                    "お子様の学年・氏名：\n" + grade_name +
                    "備考：\n" + remarks;
 
-    window.alert('then catch 変更前');
+    window.alert('then catch 変更1');
     sendMessage(sendText);
     return false;
 });
 
 function sendMessage(sendText) {
-    liff.sendMessages([{
-        type: 'text',
-        text: sendText
-    }]).then(function () {
+    liff.sendMessages([
+        {
+            type: 'text',
+            text: sendText
+        }
+    ])
+    .then(() => {
+        window.alert('メッセージを送信しました');
         liff.closeWindow();
-    }).catch(function (error) {
+    })
+    .catch((error) => {
         window.alert('フォームの送信に失敗しました： ' + error);
     });
 }
