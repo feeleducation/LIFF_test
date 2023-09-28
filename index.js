@@ -28,16 +28,15 @@ $('form').submit(function (event) {
                    "お子様の学年・氏名：\n" + grade_name +
                    "備考：\n" + remarks;
 
-    window.alert(sendText);
-
+    window.alert('then catch 変更前');
     sendMessage(sendText);
     return false;
 });
 
-function sendMessage(text) {
+function sendMessage(sendText) {
     liff.sendMessages([{
-        'type': 'text',
-        'text': text
+        type: 'text',
+        text: sendText
     }]).then(function () {
         liff.closeWindow();
     }).catch(function (error) {
