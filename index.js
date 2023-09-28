@@ -28,7 +28,7 @@ $('form').submit(function (event) {
                    "お子様の学年・氏名：\n" + grade_name +
                    "備考：\n" + remarks;
 
-    window.alert('then catch 変更1');
+    window.alert('変更2');
     sendMessage(sendText);
     return false;
 });
@@ -57,7 +57,7 @@ const key = params.get('key');
 $(document).ready(function () {
     // liffId: LIFF URL "https://liff.line.me/xxx"のxxxに該当する箇所
     // LINE DevelopersのLIFF画面より確認可能
-    const liffId = "2000893992-BllmbvgN"; //LIFF IDを入力
+    const liffId = "2000893992-GN6RmgB4"; //LIFF IDを入力
     console.log(`init liff, ID : ${liffId}`);
     initializeLiff(liffId);
     getUserId(liffId);
