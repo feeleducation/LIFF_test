@@ -30,11 +30,11 @@ $('form').submit(function (event) {
 
     window.alert(sendText);
 
-    snedMessage(sendText);
+    sendMessage(sendText);
     return false;
 });
 
-function sendMEssage(text) {
+function sendMessage(text) {
     liff.sendMessages([{
         'type': 'text',
         'text': text
