@@ -28,6 +28,8 @@ $('form').submit(function (event) {
                    "お子様の学年・氏名：\n" + grade_name +
                    "備考：\n" + remarks;
 
+    window.alert(sendText);
+
     snedMessage(sendText);
     return false;
 });
