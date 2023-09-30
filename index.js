@@ -44,7 +44,7 @@ function sendMessage(sendText) {
         liff.closeWindow();
     })
     .catch((error) => {
-        window.alert('フォームの送信に失敗しました： ' + error);
+        window.alert('フォームの送信に失敗しました： ' + error + "\nもう1度お試しください。改善されないようでしたらチャットにてお問い合わせください。");
     });
 }
 

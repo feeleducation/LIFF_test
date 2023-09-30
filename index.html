@@ -44,10 +44,10 @@
                 <label for="date" class="form-label">参加される理科実験教室・日程 【必須】</label>
                 <select class="form-select" id="date" name="date" required>
                     <option selected value="">選択してください</option>
-                    <option value="10/15(日)13:00~糸電話の謎をおえ！">10/15(日)13:00~ 糸電話の謎をおえ！</option>
+                    <option value="10/15(日)13:00~糸電話の謎を追え！">10/15(日)13:00~ 糸電話の謎をおえ！</option>
                 </select>
             </div>
-            <div class="form-group mb-3">
+            <div class="mb-3">
                 <label for="parent-name" class="form-label">保護者様の氏名 【必須】</label>
                 <input type="text" class="form-control" id="parent-name" name="parent-name" autocomplete="name"
                     placeholder="九大　花子" required>
@@ -55,25 +55,24 @@
             <div class="mb-3">
                 <label class="form-label">お子様の学年・氏名 【1人目は必須】</label>
                 <div class="row mb-1">
-                    <!--<div class="col-auto"><label for="grade1" class="form-label form-control-plaintext">学年</label></div>-->
-                    <div class="col-auto"><select class="form-select" id="grade1" name="grade1" required>
-                            <option selected value="">学年</option>
-                            <option value="未就学">未就学</option>
-                            <option value="1年">1年</option>
-                            <option value="2年">2年</option>
-                            <option value="3年">3年</option>
-                            <option value="4年">4年</option>
-                            <option value="5年">5年</option>
-                            <option value="6年">6年</option>
-                        </select></div>
-                    <!--<div class="col-auto"><label for="name1" class="form-label form-control-plaintext">氏名</label></div>-->
-                    <div class="col-auto"><input type="text" class="form-control" id="name1" name="name1"
-                        placeholder="氏名（1人目）" required></div>
+                    <div class="col-auto">
+                        <label class="form-label">　</label>
+                    </div>
+                    <div class="col">
+                        <label class="form-label">学年を選択</label>
+                    </div>
+                    <div class="col-7">
+                        <label class="form-label">氏名</label>
+                    </div>
+                    
                 </div>
                 <div class="row mb-1">
-                    <!--<div class="col-auto"><label for="grade2" class="form-label form-control-plaintext">学年</label></div>-->
-                    <div class="col-auto"><select class="form-select" id="grade2" name="grade2">
-                            <option selected value="">学年</option>
+                    <div class="col-auto">
+                        <label for="grade1" class="form-label form-control-plaintext">1</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" id="grade1" name="grade1" required>
+                            <option selected value="">学年を選択</option>
                             <option value="未就学">未就学</option>
                             <option value="1年">1年</option>
                             <option value="2年">2年</option>
@@ -81,15 +80,20 @@
                             <option value="4年">4年</option>
                             <option value="5年">5年</option>
                             <option value="6年">6年</option>
-                        </select></div>
-                    <!--<div class="col-auto"><label for="name2" class="form-label form-control-plaintext">氏名</label></div>-->
-                    <div class="col-auto"><input type="text" class="form-control" id="name2" name="name2" 
-                        placeholder="氏名（2人目）"></div>
+                        </select>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control" id="name1" name="name1"
+                        placeholder="" required>
+                    </div>
                 </div>
                 <div class="row mb-1">
-                    <!--<div class="col-auto"><label for="grade3" class="form-label form-control-plaintext">学年</label></div>-->
-                    <div class="col-auto"><select class="form-select" id="grade3" name="grade3">
-                            <option selected value="">学年</option>
+                    <div class="col-auto">
+                        <label for="grade2" class="form-label col-auto form-control-plaintext">2</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" id="grade2" name="grade2">
+                            <option selected value="">学年を選択</option>
                             <option value="未就学">未就学</option>
                             <option value="1年">1年</option>
                             <option value="2年">2年</option>
@@ -97,14 +101,40 @@
                             <option value="4年">4年</option>
                             <option value="5年">5年</option>
                             <option value="6年">6年</option>
-                        </select></div>
-                    <!--<div class="col-auto"><label for="name3" class="form-label form-control-plaintext">氏名</label></div>-->
-                    <div class="col-auto"><input type="text" class="form-control" id="name3" name="name3" 
-                        placeholder="氏名（3人目）"></div>
+                        </select>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control" id="name2" name="name2" 
+                        placeholder="">
+                    </div>
                 </div>
                 <div class="row mb-1">
-                    <!--<div class="col-auto"><label for="grade4" class="form-label form-control-plaintext">学年</label></div>-->
-                    <div class="col-auto"><select class="form-select" id="grade4" name="grade4">
+                    <div class="col-auto">
+                        <label for="grade3" class="form-label col-auto form-control-plaintext">3</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" id="grade3" name="grade3">
+                            <option selected value="">学年を選択</option>
+                            <option value="未就学">未就学</option>
+                            <option value="1年">1年</option>
+                            <option value="2年">2年</option>
+                            <option value="3年">3年</option>
+                            <option value="4年">4年</option>
+                            <option value="5年">5年</option>
+                            <option value="6年">6年</option>
+                        </select>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control" id="name3" name="name3" 
+                        placeholder="">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="grade4" class="form-label col-auto form-control-plaintext">4</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" id="grade4" name="grade4">
                             <option selected value="">学年</option>
                             <option value="未就学">未就学</option>
                             <option value="1年">1年</option>
@@ -113,10 +143,11 @@
                             <option value="4年">4年</option>
                             <option value="5年">5年</option>
                             <option value="6年">6年</option>
-                        </select></div>
-                    <!--<div class="col-auto"><label for="name4" class="form-label form-control-plaintext">氏名</label></div>-->
-                    <div class="col-auto"><input type="text" class="form-control" id="name4" name="name4" 
-                        placeholder="氏名（4人目）"></div>
+                        </select>
+                    </div>
+                    <div class="col-7"><input type="text" class="form-control" id="name4" name="name4" 
+                        placeholder="">
+                    </div>
                 </div>
                 <div id="grade-name-help" class="form-text">参加されるお子様が5人以上の場合は、お手数ですが複数回に分けて送信してください。</div>
             </div>
