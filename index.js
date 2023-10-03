@@ -41,9 +41,11 @@ function sendMessage(sendText) {
     ])
     .then(() => {
         // window.alert('メッセージを送信しました');
+        console.log('Message Sending success', 'text: ' + sendText);
         liff.closeWindow();
     })
     .catch((error) => {
+        console.log('message sending failed ', error, 'text: ' + sendText);
         window.alert('フォームの送信に失敗しました： ' + error + "\nもう1度お試しください。改善されないようでしたらチャットにてお問い合わせください。");
     });
 }
@@ -54,12 +56,9 @@ const key = params.get('key');
 
 
 $(document).ready(function () {
-    // liffId: LIFF URL "https://liff.line.me/xxx"のxxxに該当する箇所
-    // LINE DevelopersのLIFF画面より確認可能
     const liffId = "2000893992-GN6RmgB4"; //LIFF IDを入力
     console.log(`init liff, ID : ${liffId}`);
     initializeLiff(liffId);
-    getUserId(liffId);
 })
 
 
@@ -80,4 +79,18 @@ function initializeLiff(liffId) {
         .catch((err) => {
             console.log('LIFF Initialization failed ', err);
         });
+}
+
+function childRequired(field){
+    if(field.value.length > 0) {
+        const elm = document.forms[0].elements;
+        for (let i=0; i < elm.length; i++) {
+            if (elm[i] == field) {
+                elm[i + 1].setAttribute(required, true);
+                elm[i + 1].setAttribute(required, true);
+                break;
+            }
+        }
+    }
+    else {}
 }
