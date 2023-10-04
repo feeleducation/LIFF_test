@@ -1,5 +1,5 @@
 $('form').submit(function (event) {
-    if(document.forms[0].classList.contains("was-validated")){
+    if(!(document.forms[0].classList.contains("was-validated"))){
         document.forms[0].classList.add("was-validated");
         return false;
     }
