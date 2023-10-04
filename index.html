@@ -39,7 +39,8 @@
             　（定員に満たない場合のみ事前予約なしで参加可能）<br>
         </p>
         <hr>
-        <form class="was-validated" novalidate>
+        <!--<form novalidate>-->
+        <form>
             <div class="mb-3" style="display:none">
                 <label for="date" class="form-label">参加される理科実験教室・日程 【必須】</label>
                 <select class="form-select" id="date" name="date" required>
@@ -102,7 +103,7 @@
                             <label for="grade2" class="form-label col-auto form-control-plaintext">2</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade2" name="grade2">
+                            <select class="form-select" id="grade2" name="grade2" oninput="childRequired(this, name2);">
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -114,7 +115,7 @@
                             </select>
                         </div>
                         <div class="col-7">
-                            <input type="text" class="form-control" id="name2" name="name2" placeholder="">
+                            <input type="text" class="form-control" id="name2" name="name2" oninput="childRequired(this, grade2);" placeholder="">
                         </div>
                     </div>
                     <div class="invalid-feedback">
@@ -127,7 +128,7 @@
                             <label for="grade3" class="form-label col-auto form-control-plaintext">3</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade3" name="grade3">
+                            <select class="form-select" id="grade3" name="grade3" oninput="childRequired(this, name3);">
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -139,7 +140,7 @@
                             </select>
                         </div>
                         <div class="col-7">
-                            <input type="text" class="form-control" id="name3" name="name3" placeholder="">
+                            <input type="text" class="form-control" id="name3" name="name3" oninput="childRequired(this, grade3);" placeholder="">
                         </div>
                     </div>
                     <div class="invalid-feedback">
@@ -152,7 +153,7 @@
                             <label for="grade4" class="form-label col-auto form-control-plaintext">4</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade4" name="grade4">
+                            <select class="form-select" id="grade4" name="grade4" oninput="childRequired(this, name4);">
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -163,7 +164,7 @@
                                 <option value="6年">6年</option>
                             </select>
                         </div>
-                        <div class="col-7"><input type="text" class="form-control" id="name4" name="name4" placeholder="">
+                        <div class="col-7"><input type="text" class="form-control" id="name4" name="name4" oninput="childRequired(this, grade4);" placeholder="">
                         </div>
                     </div>
                     <div class="invalid-feedback">

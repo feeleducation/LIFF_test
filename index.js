@@ -1,8 +1,13 @@
 $('form').submit(function (event) {
+    if(document.forms[0].classList.contains("was-validated")){
+        document.forms[0].classList.add("was-validated");
+    }
+
     const grade = [$('select[name="grade2"]').val(), $('select[name="grade3"]').val(), $('select[name="grade4"]').val()];
     const name = [$('input[name="name2"]').val(), $('input[name="name3"]').val(), $('input[name="name4"]').val()];
     let grade_name = ($('select[name="grade1"]').val() + "・" + $('input[name="name1"]').val() + "\n");
 
+    /*
     for (let i = 0; i < 3; i++) {
         if ((!grade[i] && name[i]) || (grade[i] && !name[i])) {
             window.alert("お子様の学年、氏名は両方入力してください。（" + String(i + 2) + "列目）");
@@ -12,6 +17,8 @@ $('form').submit(function (event) {
             grade_name += grade[i] + "・" + name[i] + "\n";
         }
     }
+    */
+
     if (window.confirm('フォームを送信しますか？')) {
     }
     else {
@@ -82,7 +89,7 @@ function initializeLiff(liffId) {
 }
 
 function childRequired(field, pairId){
-    const pairField = form.getElementById(setId);
+    const pairField = form.getElementById(pairId);
     if(field.value.length > 0 || pairField.value.length > 0) {
         console.log("required set");
         field.setAttribute("required", true);
