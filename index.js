@@ -90,7 +90,7 @@ function initializeLiff(liffId) {
 }
 
 function childRequired(field, pairId){
-    const pairField = form.getElementById(pairId);
+    const pairField = document.getElementById(pairId);
     if(field.value.length > 0 || pairField.value.length > 0) {
         console.log("required set");
         field.setAttribute("required", true);
