@@ -81,36 +81,16 @@ function initializeLiff(liffId) {
         });
 }
 
-function childRequired(field){
-    if(field.value.length > 0) {
-        const elm = document.forms[0].elements;
-        for (let i=0; i < elm.length; i++) {
-            if (elm[i] == field) {
-                elm[i + 1].setAttribute(required, true);
-                elm[i + 1].setAttribute(required, true);
-                break;
-            }
-        }
+function childRequired(field, pairId){
+    const pairField = form.getElementById(setId);
+    if(field.value.length > 0 || pairField.value.length > 0) {
+        console.log("required set");
+        field.setAttribute("required", true);
+        pairField.setAttribute("required", true);
     }
-    else {}
+    else {
+        console.log("required remove");
+        field.removeAttribute("required");
+        field.removeAttribute("required");
+    }
 }
-
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
