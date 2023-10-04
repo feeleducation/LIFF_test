@@ -1,7 +1,11 @@
 $('form').submit(function (event) {
-    if(!(document.forms[0].classList.contains("was-validated"))){
-        document.forms[0].classList.add("was-validated");
-        return false;
+    const form = document.forms[0];
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (!(form.classList.contains("was-validated"))) {
+            form.classList.add("was-validated");
+        }
     }
 
     const grade = [$('select[name="grade2"]').val(), $('select[name="grade3"]').val(), $('select[name="grade4"]').val()];
@@ -39,6 +43,8 @@ $('form').submit(function (event) {
     sendMessage(sendText);
     return false;
 });
+
+
 
 function sendMessage(sendText) {
     liff.sendMessages([
