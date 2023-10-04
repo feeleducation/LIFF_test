@@ -99,6 +99,6 @@ function childRequired(field, pairId){
     else {
         console.log("required remove");
         field.removeAttribute("required");
-        field.removeAttribute("required");
+        pairField.removeAttribute("required");
     }
 }
