@@ -42,19 +42,19 @@
         <form novalidate>
             <div class="mb-3" style="display:none">
                 <label for="date" class="form-label">参加される理科実験教室・日程 【必須】</label>
-                <select class="form-select" id="date" name="date" required>
+                <select class="form-select" id="date" name="date" aria-describedby="date-invalid" required>
                     <!--<option selected value="">選択してください</option>-->
                     <option selected value="10/15(日)13:00~糸電話の謎を追え！">10/15(日)13:00~糸電話の謎を追え！</option>
                 </select>
-                <div class="invalid-feedback">
+                <div class="invalid-feedback" id="date-invalid">
                     参加を希望する日程を選択してください。
                 </div>
             </div>
             <div class="mb-3">
                 <label for="parent-name" class="form-label">保護者様の氏名 【必須】</label>
                 <input type="text" class="form-control" id="parent-name" name="parent-name" autocomplete="name"
-                    placeholder="九大　花子" required>
-                <div class="invalid-feedback">
+                    placeholder="九大　花子" aria-describedby="parent-name-invalid" required>
+                <div class="invalid-feedback" id="parent-name-invalid">
                     保護者様の氏名を入力してください。
                 </div>
             </div>
@@ -77,7 +77,7 @@
                             <label for="grade1" class="form-label form-control-plaintext">1</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade1" name="grade1" required>
+                            <select class="form-select" id="grade1" name="grade1" aria-describedby="grade-name-help child1-invalid" required>
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -89,10 +89,10 @@
                             </select>
                         </div>
                         <div class="col-7">
-                            <input type="text" class="form-control" id="name1" name="name1" placeholder="" required>
+                            <input type="text" class="form-control" id="name1" name="name1" placeholder="" aria-describedby="grade-name-help child1-invalid" required>
                         </div>
                     </div>
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback" id="child1-invalid">
                         1人目のお子様の学年、氏名を入力してください。
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                             <label for="grade2" class="form-label col-auto form-control-plaintext">2</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade2" name="grade2" oninput="childRequired(this, 'name2');">
+                            <select class="form-select" id="grade2" name="grade2" aria-describedby="grade-name-help child2-invalid" oninput="childRequired(this, 'name2');">
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -114,10 +114,10 @@
                             </select>
                         </div>
                         <div class="col-7">
-                            <input type="text" class="form-control" id="name2" name="name2" oninput="childRequired(this, 'grade2');" placeholder="">
+                            <input type="text" class="form-control" id="name2" name="name2" aria-describedby="grade-name-help child2-invalid" oninput="childRequired(this, 'grade2');" placeholder="">
                         </div>
                     </div>
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback" id="child2-invalid">
                         2人目のお子様の学年、氏名を入力してください。一方のみの入力はできません。
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                             <label for="grade3" class="form-label col-auto form-control-plaintext">3</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade3" name="grade3" oninput="childRequired(this, 'name3');">
+                            <select class="form-select" id="grade3" name="grade3" aria-describedby="grade-name-help child3-invalid" oninput="childRequired(this, 'name3');">
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -139,10 +139,10 @@
                             </select>
                         </div>
                         <div class="col-7">
-                            <input type="text" class="form-control" id="name3" name="name3" oninput="childRequired(this, 'grade3');" placeholder="">
+                            <input type="text" class="form-control" id="name3" name="name3" aria-describedby="grade-name-help child3-invalid" oninput="childRequired(this, 'grade3');" placeholder="">
                         </div>
                     </div>
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback" id="child3-invalid">
                         3人目のお子様の学年、氏名を入力してください。一方のみの入力はできません。
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                             <label for="grade4" class="form-label col-auto form-control-plaintext">4</label>
                         </div>
                         <div class="col">
-                            <select class="form-select" id="grade4" name="grade4" oninput="childRequired(this, 'name4');">
+                            <select class="form-select" id="grade4" name="grade4" aria-describedby="grade-name-help child4-invalid" oninput="childRequired(this, 'name4');">
                                 <option selected value="">学年を選択</option>
                                 <option value="未就学">未就学</option>
                                 <option value="1年">1年</option>
@@ -163,10 +163,10 @@
                                 <option value="6年">6年</option>
                             </select>
                         </div>
-                        <div class="col-7"><input type="text" class="form-control" id="name4" name="name4" oninput="childRequired(this, 'grade4');" placeholder="">
+                        <div class="col-7"><input type="text" class="form-control" id="name4" name="name4" aria-describedby="grade-name-help child4-invalid" oninput="childRequired(this, 'grade4');" placeholder="">
                         </div>
                     </div>
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback" id="child4-invalid">
                         4人目のお子様の学年、氏名を入力してください。一方のみの入力はできません。
                     </div>
                 </div>
@@ -177,9 +177,9 @@
                 <div id="photo-consent-help" class="form-text mb-2">
                     理科実験教室中に写真を撮影し、顔を隠したうえでF.E.E.L.の広報で使用する場合があります。ご了承ください。</div>
                 <input type="checkbox" class="form-check-input" id="photo-consent" name="photo-consent"
-                    aria-describedby="photo-consent-help" required>
+                    aria-describedby="photo-consent-help photo-consent-invalid" required>
                 <label class="form-check-label" for="photo-consent">承諾する</label>
-                <div class="invalid-feedback">
+                <div class="invalid-feedback" id="photo-consent-invalid">
                     「承諾する」を選択してください。
                 </div>
             </div>

@@ -6,6 +6,7 @@ $('form').submit(function (event) {
         if (!(form.classList.contains("was-validated"))) {
             form.classList.add("was-validated");
         }
+        return false;
     }
 
     const grade = [$('select[name="grade2"]').val(), $('select[name="grade3"]').val(), $('select[name="grade4"]').val()];
